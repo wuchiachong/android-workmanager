@@ -41,4 +41,19 @@
 
     </application>
 
+    <queries>
+        <!-- Specific apps you interact with, eg: -->
+        <package android:name="com.example.background" />
+
+        <!--
+             Specific intents you query for,
+             eg: for a custom share UI
+        -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:mimeType="image/png" />
+        </intent>
+    </queries>
+
 </manifest>

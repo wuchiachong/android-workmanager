@@ -41,8 +41,8 @@ class BlurActivity : AppCompatActivity() {
         binding.cancelButton.setOnClickListener { viewModel.cancelWork() }
         binding.goButton.setOnClickListener { viewModel.applyBlur(blurLevel) }
         binding.seeFileButton.setOnClickListener {
-            viewModel.outputUri?.let { currentUri ->
-                val actionView = Intent(Intent.ACTION_VIEW, currentUri)
+            viewModel.outputUri?.let {
+                val actionView = Intent(Intent.ACTION_VIEW, it)
                 actionView.resolveActivity(packageManager)?.run {
                     startActivity(actionView)
                 }
